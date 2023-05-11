@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotesMAUI.Themes.LightTheme">
+      <!--  colors  -->
+    <Color x:Key="PrimaryDarkColor">#3700B3</Color>
+    <Color x:Key="PrimaryColor">#6200EE</Color>
+    <Color x:Key="AccentColor">#BB86FC</Color>
+    <Color x:Key="PageBackgroundColor">#F5F5F5</Color>
+    <Color x:Key="FontIconColor">Black</Color>
+    <Color x:Key="TextColor">#3700B3</Color>
+    <Color x:Key="TextButtonColor">Black</Color>
+    <Color x:Key="MyColor">Pink</Color>
+    <Color x:Key="PlaceholderColor">Black</Color>
+    <Color x:Key="border">#F5F5F5</Color>
+</ResourceDictionary>

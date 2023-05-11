@@ -30,6 +30,9 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+	  <CreatePackage>false</CreatePackage>
+	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -50,6 +53,28 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="SQLite" Version="3.13.0" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+		<PackageReference Include="Microsoft.AppCenter" Version="5.0.1" />
+		<PackageReference Include="Microsoft.AppCenter.Crashes" Version="5.0.1" />
+		<PackageReference Include="Microsoft.AppCenter.Analytics" Version="5.0.1" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="Services\" />
+	  <None Remove="Models\" />
+	  <None Remove="Implementations\" />
+	  <None Remove="Themes\" />
+	  <None Remove="Data\" />
+	  <None Remove="Pages\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Services\" />
+	  <Folder Include="Models\" />
+	  <Folder Include="Implementations\" />
+	  <Folder Include="Themes\" />
+	  <Folder Include="Data\" />
+	  <Folder Include="Pages\" />
+	</ItemGroup>
 </Project>

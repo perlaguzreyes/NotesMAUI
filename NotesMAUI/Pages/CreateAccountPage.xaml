@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotesMAUI.Pages.CreateAccountPage"
+             Title="CreateAccountPage">
+     <StackLayout Spacing="16" Margin="16">
+         <Grid RowDefinitions="Auto,Auto">
+            <Grid ColumnDefinitions="Auto,*" RowDefinitions="*,Auto,Auto,Auto,Auto" RowSpacing="0">
+            <Image Grid.Row="0" Grid.Column="0" 
+                           Source="https://i.pinimg.com/474x/46/c9/38/46c9387e1316dee2fc4e8157b128bc24.jpg"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"   
+                           HeightRequest="150"
+                           WidthRequest="150"
+                           Margin="50,0,20,0"/>
+            <Label Grid.Row="1" Grid.Column="0" 
+                           Text="Create Account"
+                           Style="{StaticResource TitleStyle}"
+                           FontAttributes="Bold"
+                           FontSize="50"
+                           Padding="20,0,0,0"
+                           VerticalOptions="CenterAndExpand"/>
+            </Grid>
+            <Frame Grid.Row="0" Grid.RowSpan="2" HasShadow="False"
+                   Padding="25,25" Margin="10,230,0,0"
+                   VerticalOptions="CenterAndExpand">
+                <Grid ColumnDefinitions="Auto,*"
+                      RowDefinitions="*,Auto,Auto,Auto,Auto"
+                      RowSpacing="10"
+                      Margin="10,-40,0,0">
+                    <Label Grid.Column="0" Grid.Row="1"
+                           Text="User Name:"
+                            Style="{StaticResource SubtitleStyle}"
+                           VerticalTextAlignment="End"/>
+                    <Entry AutomationId="UserId"
+                           Grid.Column="1" Grid.Row="1"
+                           Placeholder="User" Text="{Binding User}">
+                     </Entry>
+                     <Label Grid.Column="0" Grid.Row="2"
+                            Text="Password:"
+                             Style="{StaticResource SubtitleStyle}"
+                            VerticalTextAlignment="End"/>
+                    <Entry AutomationId="PasswordId"
+                           Grid.Column="1" Margin="0,20,0,0" Grid.Row="2"
+                           IsPassword="True" Placeholder="Password" Text="{Binding Password}" >
+                     </Entry>
+                    <Label Grid.Column="0" Grid.Row="3"
+                            Text="Email:"
+                             Style="{StaticResource SubtitleStyle}"
+                            VerticalTextAlignment="End"/>
+                    <Entry AutomationId="EmailId"
+                           Grid.Column="1" Margin="0,20,0,0" Grid.Row="3"
+                           Placeholder="Email" Text="{Binding Email}" >
+                     </Entry>
+
+                    <Button AutomationId="CreatAccountId"
+                        Grid.ColumnSpan="2" Grid.Row="5"
+                    Text="Create account"  Command="{Binding SignInCommand}"/>
+                </Grid>
+            </Frame>
+         </Grid>
+    </StackLayout>
+</ContentPage>
